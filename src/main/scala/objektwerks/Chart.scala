@@ -5,7 +5,7 @@ import java.io.File
 import org.jfree.chart.{ChartFactory, ChartRenderingInfo, JFreeChart}
 import org.jfree.chart.entity.StandardEntityCollection
 import org.jfree.chart.util.ExportUtils
-import org.jfree.chart.imagemap.ToolTipTagFragmentGenerator
+import org.jfree.chart.imagemap.{ToolTipTagFragmentGenerator, URLTagFragmentGenerator}
 import org.jfree.data.general.DefaultPieDataset
 
 object Chart:
@@ -24,6 +24,9 @@ object Chart:
     val tooltip = new ToolTipTagFragmentGenerator() {
                     override def generateToolTipFragment(arg: String) = arg
                   }
+    val url = new URLTagFragmentGenerator() {
+                override def generateURLFragment(arg: String) = arg
+              }
 
 
     chart
