@@ -4,7 +4,7 @@ JFreeChart Image Map
 
 Note
 ----
->While it's possible to persist a chart to a file; creating an image map effectively fails. See Chart.
+>While it's possible to persist a chart to a file; creating an image map from a chart effectively fails. See Chart.
 
 Build
 -----
