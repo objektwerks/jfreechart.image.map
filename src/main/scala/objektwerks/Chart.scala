@@ -16,7 +16,9 @@ type ImageMap = String
 object Chart:
   def build(): ImageMap =
     val imageMap = Try {
-      exportChart( buildChart() )
+      val chart = buildChart()
+      persistChart(chart)
+      buildImageMap()
     }.recover {
       case NonFatal(error) =>
         println(error)
@@ -32,7 +34,11 @@ object Chart:
     dataset.setValue("DIPA", 10.0)
     ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
 
-  private def exportChart(chart: JFreeChart): String =
+  private def persistChart(chart: JFreeChart): Unit =
+    val file = File("./target/styles-chart.png")
+    ExportUtils.writeAsPNG(chart, 400, 400, file)
+
+  private def buildImageMap(): String =
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltipGenerator = new ToolTipTagFragmentGenerator() {
@@ -42,9 +48,6 @@ object Chart:
     val urlGenerator = new URLTagFragmentGenerator() {
       override def generateURLFragment(value: String) = " href=\"" + value + "\""
     }
-
-    val file = File("./target/styles-chart.png")
-    ExportUtils.writeAsPNG(chart, 400, 400, file)
 
     val reader = StringWriter()
     val writer = PrintWriter(reader)
