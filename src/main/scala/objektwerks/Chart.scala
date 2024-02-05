@@ -15,13 +15,15 @@ type ImageMap = String
 
 object Chart:
   def build(): ImageMap =
-    Try {
+    val imageMap = Try {
       exportChart( buildChart() )
     }.recover {
       case NonFatal(error) =>
         println(error)
         s"<p>Chart build error: ${error.getCause().getMessage()}</p>"
     }.get
+    println(s"image map: $imageMap")
+    imageMap
 
   private def buildChart(): JFreeChart =
     val dataset = new DefaultPieDataset[String]()
