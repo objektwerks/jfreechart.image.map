@@ -12,5 +12,6 @@ sbt run
 
 Resources
 ---------
+* [JFreeChart](https://www.jfree.org/jfreechart/)
 * [JFreeChart ExportUtils](https://javadoc.io/doc/org.jfree/jfreechart/latest/org/jfree/chart/util/ExportUtils.html)
 * [JFreeChart ImageMapUtils](https://javadoc.io/doc/org.jfree/jfreechart/latest/org/jfree/chart/imagemap/ImageMapUtils.html)
