@@ -49,6 +49,6 @@ object Chart:
     val reader = StringWriter()
     val writer = PrintWriter(reader)
 
-    ImageMapUtils.writeImageMap(writer, "stylesImageMap", renderingInfo, tooltipGenerator, urlGenerator)
+    ImageMapUtils.writeImageMap(writer, "imageMap", renderingInfo, tooltipGenerator, urlGenerator)
     writer.flush()
     reader.toString()
