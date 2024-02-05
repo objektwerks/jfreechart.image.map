@@ -5,9 +5,8 @@ import java.io.{File, PrintWriter}
 import org.jfree.chart.{ChartFactory, ChartRenderingInfo, JFreeChart}
 import org.jfree.chart.entity.StandardEntityCollection
 import org.jfree.chart.util.ExportUtils
-import org.jfree.chart.imagemap.{ToolTipTagFragmentGenerator, URLTagFragmentGenerator}
+import org.jfree.chart.imagemap.{ImageMapUtils, ToolTipTagFragmentGenerator, URLTagFragmentGenerator}
 import org.jfree.data.general.DefaultPieDataset
-import org.jfree.chart.imagemap.ImageMapUtils
 
 import scala.util.Try
 import scala.util.control.NonFatal
