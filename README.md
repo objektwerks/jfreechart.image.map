@@ -4,6 +4,8 @@ JFreeChart Image Map
 
 Note
 ----
+>This is a work-in-progress! The image map is not right.
+
 >The file generated is:
 ```
 ./target/image-map-chart.png
