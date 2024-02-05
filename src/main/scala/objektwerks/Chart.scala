@@ -36,11 +36,11 @@ object Chart:
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltipGenerator = new ToolTipTagFragmentGenerator() {
-      override def generateToolTipFragment(value: String) = value
+      override def generateToolTipFragment(value: String) = " style = \"" + value + "\" href = \""
     }
 
     val urlGenerator = new URLTagFragmentGenerator() {
-      override def generateURLFragment(value: String) = value
+      override def generateURLFragment(value: String) = " href=\"" + value + "\""
     }
 
     val file = File("./target/image-map-chart.png")
