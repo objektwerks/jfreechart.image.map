@@ -11,8 +11,10 @@ import org.jfree.data.general.DefaultPieDataset
 import scala.util.Try
 import scala.util.control.NonFatal
 
+type ImageMap = String
+
 object Chart:
-  def build(): String =
+  def build(): ImageMap =
     Try {
       exportChart( buildChart() )
     }.recover {
