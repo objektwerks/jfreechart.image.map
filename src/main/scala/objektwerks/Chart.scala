@@ -1,6 +1,7 @@
 package objektwerks
 
-import org.jfree.chart.{ChartFactory, JFreeChart}
+import org.jfree.chart.{ChartFactory, ChartRenderingInfo, JFreeChart}
+import org.jfree.chart.entity.StandardEntityCollection
 import org.jfree.data.general.DefaultPieDataset
 
 object Chart:
@@ -11,4 +12,8 @@ object Chart:
     dataset.setValue("DIPA", 10.0)
     
     val chart = ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
+
+    val renderingInfo = new ChartRenderingInfo( StandardEntityCollection() )
+
+    
     chart
