@@ -22,7 +22,7 @@ object Chart:
         println(error)
         s"<p>Chart build error: ${error.getCause().getMessage()}</p>"
     }.get
-    println(s"image map: $imageMap")
+    println(imageMap)
     imageMap
 
   private def buildChart(): JFreeChart =
@@ -51,4 +51,4 @@ object Chart:
 
     ImageMapUtils.writeImageMap(writer, "imageMap", renderingInfo, tooltipGenerator, urlGenerator)
     writer.flush()
-    reader.toString()
+    reader.toString() // Same output using: ImageMapUtils.getImageMap("imageMap", renderingInfo, tooltipGenerator, urlGenerator)
