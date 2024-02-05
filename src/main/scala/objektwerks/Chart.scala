@@ -21,8 +21,8 @@ object Chart:
 
   private def buildChart(): JFreeChart =
     val dataset = new DefaultPieDataset[String]()
-    dataset.setValue("Pale Ale", 30.0)
-    dataset.setValue("IPA", 60.0)
+    dataset.setValue("Pale Ale", 20.0)
+    dataset.setValue("IPA", 70.0)
     dataset.setValue("DIPA", 10.0)
     ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
 
