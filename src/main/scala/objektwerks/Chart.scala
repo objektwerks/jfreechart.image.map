@@ -35,13 +35,12 @@ object Chart:
   private def exportChart(chart: JFreeChart): String =
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
-    val name = "./target/image-map-chart.png"
-    val file = File(name)
+    val file = File("./target/image-map-chart.png")
     ExportUtils.writeAsPNG(chart, 400, 400, file)
 
     val reader = StringWriter()
     val writer = PrintWriter(reader)
 
-    ImageMapUtils.writeImageMap(writer, name, renderingInfo)
+    ImageMapUtils.writeImageMap(writer, "image-map-chart.png", renderingInfo)
     writer.flush()
     reader.toString()
