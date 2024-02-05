@@ -10,5 +10,5 @@ object ImageMapChart:
     dataset.setValue("IPA", 60.0)
     dataset.setValue("DIPA", 10.0)
     
-    val chart = ChartFactory.createPieChart("Soft Drink Pie Chart", dataset, true, true, true)
+    val chart = ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
     chart
