@@ -2,6 +2,10 @@ JFreeChart Image Map
 --------------------
 >JfreeChart image map app using ScalaFx and Scala 3.
 
+Note
+----
+>While it's possible to persisten a chart to a file; creating an image map falls short. See Chart.
+
 Build
 -----
 sbt clean compile
