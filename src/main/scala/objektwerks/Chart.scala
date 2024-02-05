@@ -16,9 +16,9 @@ object Chart:
     Try {
       exportChart( buildChart() )
     }.recover {
-      case NonFatal(e) =>
-        println(e)
-        s"<p>Charing build error: ${e.getCause().getMessage()}</p>"
+      case NonFatal(error) =>
+        println(error)
+        s"<p>Charing build error: ${error.getCause().getMessage()}</p>"
     }.get
 
   private def buildChart(): JFreeChart =
@@ -38,13 +38,13 @@ object Chart:
       override def generateToolTipFragment(value: String) = value
     }
 
-    val url = new URLTagFragmentGenerator() {
-                override def generateURLFragment(value: String) = value
-              }
+    val urlGenerator = new URLTagFragmentGenerator() {
+      override def generateURLFragment(value: String) = value
+    }
 
     val writer = PrintWriter(file)
 
-    ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo, tooltipGenerator, url)
+    ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo, tooltipGenerator, urlGenerator)
 
     val imagemap = ""
     writer.write(imagemap)
