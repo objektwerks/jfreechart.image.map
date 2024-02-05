@@ -2,7 +2,7 @@ package objektwerks
 
 import scalafx.application.JFXApp3
 
-object StatsApp extends JFXApp3:
+object App extends JFXApp3:
   override def start(): Unit =
     val view = StatsView()
     stage = new JFXApp3.PrimaryStage {
