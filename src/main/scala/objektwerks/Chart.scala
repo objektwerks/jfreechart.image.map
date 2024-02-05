@@ -1,6 +1,6 @@
 package objektwerks
 
-import java.io.{File, PrintWriter}
+import java.io.{File, PrintWriter, StringWriter}
 
 import org.jfree.chart.{ChartFactory, ChartRenderingInfo, JFreeChart}
 import org.jfree.chart.entity.StandardEntityCollection
@@ -39,12 +39,14 @@ object Chart:
       override def generateURLFragment(value: String) = value
     }
 
-    val file = File("chart.png")
-    ExportUtils.writeAsPNG(chart, 600, 400, file)
-    val writer = PrintWriter(file)
+    val file = File("./target/chart.png")
+    ExportUtils.writeAsPNG(chart, 400, 400, file)
 
-    ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo, tooltipGenerator, urlGenerator)
+    val reader = StringWriter()
+    val writer = PrintWriter(reader)
 
-    val imageMap = ""
-    writer.write(imageMap)
-    imageMap
+    ImageMapUtils.writeImageMap(writer, "chart.png", renderingInfo, tooltipGenerator, urlGenerator)
+    writer.flush()
+    val map = reader.toString()
+    println(s"image map: $map")
+    map
