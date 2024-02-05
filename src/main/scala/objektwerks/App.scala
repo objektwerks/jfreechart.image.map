@@ -9,6 +9,3 @@ object App extends JFXApp3:
       scene = view.scene
       title = "JfreeChart Image Map"
     }
-    println("*** JFreeChart Image Map app started.")
-
-  override def stopApp(): Unit = println("*** JFreeChart Image Map app stopped.")
