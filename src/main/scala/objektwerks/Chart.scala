@@ -18,7 +18,7 @@ object Chart:
     }.recover {
       case NonFatal(error) =>
         println(error)
-        s"<p>Charing build error: ${error.getCause().getMessage()}</p>"
+        s"<p>Chart build error: ${error.getCause().getMessage()}</p>"
     }.get
 
   private def buildChart(): JFreeChart =
