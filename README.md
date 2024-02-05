@@ -4,7 +4,15 @@ JFreeChart Image Map
 
 Note
 ----
->While it's possible to persist a chart to a file; creating an image map from a chart effectively fails. See Chart.
+>The file generated is:
+```
+./target/image-map-chart.png
+```
+
+>The image map generated is:
+```
+<map id="./target/image-map-chart.png" name="./target/image-map-chart.png"></map>
+```
 
 Build
 -----
