@@ -7,7 +7,7 @@ import scalafx.scene.web.WebView
 
 final class View:
   val webView = WebView()
-  webView.getEngine().loadContent( Chart.build() )
+  webView.getEngine().loadContent( Chart.build(), "text/html" )
 
   val contentPane = new VBox:
     spacing = 6
