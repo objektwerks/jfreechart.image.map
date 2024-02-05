@@ -18,7 +18,7 @@ object Chart:
       exportChart( buildChart() )
     }.recover {
       case NonFatal(e) => e.getCause().getMessage()
-    }
+    }.get
 
   private def buildChart(): JFreeChart =
     val dataset = new DefaultPieDataset[String]()
