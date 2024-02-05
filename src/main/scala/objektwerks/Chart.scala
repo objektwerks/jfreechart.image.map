@@ -43,12 +43,12 @@ object Chart:
       override def generateURLFragment(value: String) = " href=\"" + value + "\""
     }
 
-    val file = File("./target/image-map-chart.png")
+    val file = File("./target/styles-chart.png")
     ExportUtils.writeAsPNG(chart, 400, 400, file)
 
     val reader = StringWriter()
     val writer = PrintWriter(reader)
 
-    ImageMapUtils.writeImageMap(writer, "image-map-chart.png", renderingInfo, tooltipGenerator, urlGenerator)
+    ImageMapUtils.writeImageMap(writer, "stylesImageMap", renderingInfo, tooltipGenerator, urlGenerator)
     writer.flush()
     reader.toString()
