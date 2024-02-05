@@ -37,7 +37,7 @@ object Chart:
                   }
 
     val url = new URLTagFragmentGenerator() {
-                override def generateURLFragment(arg: String) = arg
+                override def generateURLFragment(value: String) = value
               }
 
     val writer = PrintWriter(file)
