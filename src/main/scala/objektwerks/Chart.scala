@@ -33,7 +33,7 @@ object Chart:
     val info = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltip = new ToolTipTagFragmentGenerator() {
-                    override def generateToolTipFragment(arg: String) = arg
+                    override def generateToolTipFragment(value: String) = value
                   }
 
     val url = new URLTagFragmentGenerator() {
