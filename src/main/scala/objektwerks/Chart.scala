@@ -1,6 +1,6 @@
 package objektwerks
 
-import java.io.File
+import java.io.{File, PrintWriter}
 
 import org.jfree.chart.{ChartFactory, ChartRenderingInfo}
 import org.jfree.chart.entity.StandardEntityCollection
@@ -21,10 +21,19 @@ object Chart:
     ExportUtils.writeAsPNG(chart, 600, 400, file)
 
     val info = ChartRenderingInfo( StandardEntityCollection() )
+
     val tooltip = new ToolTipTagFragmentGenerator() {
                     override def generateToolTipFragment(arg: String) = arg
                   }
+
     val url = new URLTagFragmentGenerator() {
                 override def generateURLFragment(arg: String) = arg
               }
-    ImageMapUtils.getImageMap("image-map-chart", info, tooltip, url)
+
+    val writer = PrintWriter(file)
+
+    ImageMapUtils.writeImageMap(writer, "image-map-chart", info, tooltip, url)
+
+    val imagemap = ""
+    writer.write(imagemap)
+    imagemap
