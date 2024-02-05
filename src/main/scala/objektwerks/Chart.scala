@@ -29,9 +29,6 @@ object Chart:
     ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
 
   private def exportChart(chart: JFreeChart): String =
-    val file = File("chart.png")
-    ExportUtils.writeAsPNG(chart, 600, 400, file)
-
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltipGenerator = new ToolTipTagFragmentGenerator() {
@@ -42,6 +39,8 @@ object Chart:
       override def generateURLFragment(value: String) = value
     }
 
+    val file = File("chart.png")
+    ExportUtils.writeAsPNG(chart, 600, 400, file)
     val writer = PrintWriter(file)
 
     ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo, tooltipGenerator, urlGenerator)
