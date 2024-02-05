@@ -4,8 +4,8 @@ import java.io.{File, PrintWriter}
 
 import org.jfree.chart.{ChartFactory, ChartRenderingInfo, JFreeChart}
 import org.jfree.chart.entity.StandardEntityCollection
-import org.jfree.chart.util.ExportUtils
 import org.jfree.chart.imagemap.{ImageMapUtils, ToolTipTagFragmentGenerator, URLTagFragmentGenerator}
+import org.jfree.chart.util.ExportUtils
 import org.jfree.data.general.DefaultPieDataset
 
 import scala.util.Try
