@@ -11,7 +11,7 @@ Note
 
 >The image map generated is:
 ```
-<map id="./target/image-map-chart.png" name="./target/image-map-chart.png"></map>
+<map id="image-map-chart.png" name="image-map-chart.png"></map>
 ```
 
 Build
