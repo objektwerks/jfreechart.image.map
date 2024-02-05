@@ -13,7 +13,7 @@ Note
 
 >The image map generated is:
 ```
-<map id="stylesImageMap" name="stylesImageMap"></map>
+<map id="imageMap" name="imageMap"></map>
 ```
 
 Build
