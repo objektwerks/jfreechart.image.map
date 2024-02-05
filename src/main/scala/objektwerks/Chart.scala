@@ -37,7 +37,7 @@ object Chart:
     val reader = StringWriter()
     val writer = PrintWriter(reader)
 
-    ImageMapUtils.writeImageMap(writer, "chart.png", renderingInfo)
+    ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo)
     writer.flush()
     val map = reader.toString()
     println(s"image map: $map")
