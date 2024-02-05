@@ -46,6 +46,6 @@ object Chart:
 
     ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo, tooltipGenerator, urlGenerator)
 
-    val imagemap = ""
-    writer.write(imagemap)
-    imagemap
+    val imageMap = ""
+    writer.write(imageMap)
+    imageMap
