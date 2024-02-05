@@ -32,13 +32,14 @@ object Chart:
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val file = File("./target/chart.png")
-    ExportUtils.writeAsPNG(chart, 400, 400, file)
+    ExportUtils.writeAsPNG(chart, 400, 400, file) // Works correctly!
 
     val reader = StringWriter()
     val writer = PrintWriter(reader)
 
     ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo)
     writer.flush()
+
     val map = reader.toString()
-    println(s"image map: $map")
+    println(s"image map: $map") // Doesn't work correctly! image map: <map id="image-map-chart" name="image-map-chart"></map>
     map
