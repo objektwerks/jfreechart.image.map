@@ -4,7 +4,7 @@ JFreeChart Image Map
 
 Note
 ----
->This is a work-in-progress! The image map is not right.
+>This is a work-in-progress! The image map is empty!
 
 >The file generated is:
 ```
