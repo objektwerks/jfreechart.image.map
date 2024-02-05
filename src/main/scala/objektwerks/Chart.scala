@@ -32,7 +32,7 @@ object Chart:
     val file = File("chart.png")
     ExportUtils.writeAsPNG(chart, 600, 400, file)
 
-    val info = ChartRenderingInfo( StandardEntityCollection() )
+    val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltip = new ToolTipTagFragmentGenerator() {
                     override def generateToolTipFragment(value: String) = value
@@ -44,7 +44,7 @@ object Chart:
 
     val writer = PrintWriter(file)
 
-    ImageMapUtils.writeImageMap(writer, "image-map-chart", info, tooltip, url)
+    ImageMapUtils.writeImageMap(writer, "image-map-chart", renderingInfo, tooltip, url)
 
     val imagemap = ""
     writer.write(imagemap)
