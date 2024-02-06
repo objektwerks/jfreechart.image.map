@@ -52,7 +52,7 @@ object Chart:
     }
 
     val urlGenerator = new URLTagFragmentGenerator() {
-      override def generateURLFragment(value: String) = " href=\"" + value + "\""
+      override def generateURLFragment(value: String) = " href = \"" + value + "\""
     }
 
     ImageMapUtils.getImageMap("imageMap", renderingInfo, tooltipGenerator, urlGenerator)
