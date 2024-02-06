@@ -40,8 +40,8 @@ object Chart:
     dataset.setValue("DIPA", 10.0)
     ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
 
-  private def persistChart(chart: JFreeChart, chartFilePath: String): Unit =
-    val file = File(chartFilePath)
+  private def persistChart(chart: JFreeChart, chartPath: String): Unit =
+    val file = File(chartPath)
     ExportUtils.writeAsPNG(chart, 400, 400, file)
 
   private def buildImageMap(): ImageMap =
