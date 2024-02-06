@@ -8,7 +8,6 @@ import scalafx.scene.image.{Image, ImageView}
 import scalafx.scene.layout.VBox
 import scalafx.scene.web.WebView
 
-
 final class View:
   val chartInfo = Chart.build()
 
