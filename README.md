@@ -4,7 +4,7 @@ JFreeChart Image Map
 
 Note
 ----
->While a chart is persistable to a file; the generated image map is effectively empty!
+>While a chart is persistable; the generated image map is effectively empty!
 
 >The file generated is:
 ```
