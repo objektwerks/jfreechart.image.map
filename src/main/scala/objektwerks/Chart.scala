@@ -48,7 +48,7 @@ object Chart:
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltipGenerator = new ToolTipTagFragmentGenerator() {
-      override def generateToolTipFragment(value: String) = " style = \"" + value + "\" href = \""
+      override def generateToolTipFragment(value: String) = s"style = `$value`"
     }
 
     val urlGenerator = new URLTagFragmentGenerator() {
