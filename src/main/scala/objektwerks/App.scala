@@ -7,5 +7,5 @@ object App extends JFXApp3:
     val view = View()
     stage = new JFXApp3.PrimaryStage {
       scene = view.scene
-      title = "JfreeChart Image Map"
+      title = "JfreeChart Image View & Map"
     }
