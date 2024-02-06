@@ -8,6 +8,6 @@ object App extends JFXApp3:
     stage = new JFXApp3.PrimaryStage {
       scene = view.scene
       title = "JfreeChart Image View & Map"
-      maxWidth = 612
+      maxWidth = 412
       maxHeight = 800
     }

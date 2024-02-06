@@ -42,7 +42,7 @@ object Chart:
 
   private def persistChart(chart: JFreeChart, chartPath: String): Unit =
     val file = File(chartPath)
-    ExportUtils.writeAsPNG(chart, 600, 400, file)
+    ExportUtils.writeAsPNG(chart, 400, 400, file)
 
   private def buildImageMap(): ImageMap =
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
