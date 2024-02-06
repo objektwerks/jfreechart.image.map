@@ -19,7 +19,7 @@ final case class ChartInfo(imageMap: ImageMap, imageUrl: ImageUrl)
 object Chart:
   val chartFilePath = "./target/styles-chart.png"
 
-  def build(): ImageMap =
+  def build(): ChartInfo =
     val imageMap = Try {
       val chart = buildChart()
       persistChart(chart, chartFilePath)
@@ -30,7 +30,7 @@ object Chart:
         s"<p>Chart build error: ${error.getCause().getMessage()}</p>"
     }.get
     println(imageMap)
-    imageMap
+    ChartInfo(imageMap, chartFilePath)
 
   private def buildChart(): JFreeChart =
     val dataset = new DefaultPieDataset[String]()
