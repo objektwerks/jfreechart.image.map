@@ -41,7 +41,7 @@ object Chart:
     val file = File("./target/styles-chart.png")
     ExportUtils.writeAsPNG(chart, 400, 400, file)
 
-  private def buildImageMap(): String =
+  private def buildImageMap(): ImageMap =
     val renderingInfo = ChartRenderingInfo( StandardEntityCollection() )
 
     val tooltipGenerator = new ToolTipTagFragmentGenerator() {
