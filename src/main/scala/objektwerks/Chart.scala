@@ -17,13 +17,12 @@ type ImageUrl = String
 final case class ChartInfo(imageMap: ImageMap, imageUrl: ImageUrl)
 
 object Chart:
-  val chartFilePath = "./target/styles-chart.png"
-  val imageUrl = "file://./target/styles-chart.png"
+  val imageUrl = "./target/styles-chart.png"
 
   def build(): ChartInfo =
     val imageMap = Try {
       val chart = buildChart()
-      persistChart(chart, chartFilePath)
+      persistChart(chart, imageUrl)
       buildImageMap()
     }.recover {
       case NonFatal(error) =>
