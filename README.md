@@ -15,15 +15,10 @@ Note
 ```
 <map id="imageMap" name="imageMap"></map>
 ```
->The JFreeChart API is a bit notorious for its complexity. ;)
-
-Build
------
-sbt clean compile
 
 Run
 ---
-sbt run
+sbt clean run
 
 Resources
 ---------
