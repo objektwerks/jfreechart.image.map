@@ -18,7 +18,7 @@ final class View:
 
   val webView = WebView()
   webView.getEngine().load( chartInfo.imageUrl ) // Fails to load!
-  // ImageMap is empty! webView.getEngine().loadContent( chartInfo.imageMap, "text/html" )
+  webView.getEngine().loadContent( chartInfo.imageMap, "text/html" ) // Fails to load!
 
   val rootPane = new VBox:
     spacing = 6
