@@ -17,7 +17,7 @@ final class View:
   val imageView = ImageView(image) // Works!
 
   val webView = WebView()
-  webView.getEngine().load( chartInfo.imageUrl ) // Fails to load!
+  // webView.getEngine().load( chartInfo.imageUrl ) // Fails to load!
   webView.getEngine().loadContent( chartInfo.imageMap, "text/html" ) // Fails to load!
 
   val rootPane = new VBox:
