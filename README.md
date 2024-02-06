@@ -8,7 +8,7 @@ Note
 
 >The file generated is:
 ```
-./target/image-map-chart.png
+./target/styles-chart.png
 ```
 
 >The image map generated is:
