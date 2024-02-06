@@ -12,6 +12,9 @@ import scala.util.Try
 import scala.util.control.NonFatal
 
 type ImageMap = String
+type ImageUrl = String
+
+final case class ChartInfo(imageMap: ImageMap, imageUrl: ImageUrl)
 
 object Chart:
   def build(): ImageMap =
