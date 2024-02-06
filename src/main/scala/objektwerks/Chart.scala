@@ -17,10 +17,12 @@ type ImageUrl = String
 final case class ChartInfo(imageMap: ImageMap, imageUrl: ImageUrl)
 
 object Chart:
+  val chartFilePath = "./target/styles-chart.png"
+
   def build(): ImageMap =
     val imageMap = Try {
       val chart = buildChart()
-      persistChart(chart)
+      persistChart(chart, chartFilePath)
       buildImageMap()
     }.recover {
       case NonFatal(error) =>
@@ -37,8 +39,8 @@ object Chart:
     dataset.setValue("DIPA", 10.0)
     ChartFactory.createPieChart("Beer Styles", dataset, true, true, true)
 
-  private def persistChart(chart: JFreeChart): Unit =
-    val file = File("./target/styles-chart.png")
+  private def persistChart(chart: JFreeChart, chartFilePath: String): Unit =
+    val file = File(chartFilePath)
     ExportUtils.writeAsPNG(chart, 400, 400, file)
 
   private def buildImageMap(): ImageMap =
