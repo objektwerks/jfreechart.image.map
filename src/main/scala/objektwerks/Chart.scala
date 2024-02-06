@@ -29,8 +29,6 @@ object Chart:
         println(error)
         s"<p>Chart build error: ${error.getCause().getMessage()}</p>"
     }.get
-    println(imageMap)
-    println(imageUrl)
     ChartInfo(imageMap, imageUrl)
 
   private def buildChart(): JFreeChart =
