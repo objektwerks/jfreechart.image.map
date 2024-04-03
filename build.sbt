@@ -4,7 +4,7 @@ version := "0.4-SNAPSHOT"
 scalaVersion := "3.4.2-RC1"
 libraryDependencies ++= {
   Seq(
-    "org.scalafx" %% "scalafx" % "21.0.0-R32",
+    "org.scalafx" %% "scalafx" % "22.0.0-R33",
     "org.jfree" % "jfreechart" % "1.5.4"
   )
 }
