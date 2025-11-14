@@ -5,7 +5,7 @@ scalaVersion := "3.7.4"
 libraryDependencies ++= {
   Seq(
     "org.scalafx" %% "scalafx" % "24.0.2-R36",
-    "org.jfree" % "jfreechart" % "1.5.5"
+    "org.jfree" % "jfreechart" % "1.5.6"
   )
 }
 scalacOptions ++= Seq(
